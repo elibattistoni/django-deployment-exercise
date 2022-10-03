@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+{% extends "templapp/base.html" %}
+
+{% load custom_filters %}
+
+{% block body_block %}
+<!-- anything inside this is specific of this individual html -->
+<h1>Page showing Django Template Filters</h1>
+<br>
+<h3>{{ text }}</h3>
+<h3>{{ text | upper }}</h3>
+<h3>{{ text | cut:'Hello' }}</h3>
+<h3>{{ text | slice:3 }}</h3>
+<br>
+<h3>{{ number|add:"99" }}</h3>
+{% endblock %}

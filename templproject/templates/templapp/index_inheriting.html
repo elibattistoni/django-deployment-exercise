@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+{% extends "templapp/base.html" %}
+
+{% block body_block %}
+<!-- anything inside this is specific of this individual html -->
+<h1>Index Page with an example of template inheritance</h1>
+<br>
+<p>This is the index page with inheritance from the base.html template.</p>
+<p><a href="{% url 'index' %}">Go to index</a> (homepage) to view the homepage (without inheritance)</p>
+<p><a href="{% url 'templapp:other' %}">Go to /templapp/other</a></p>
+<p><a href="{% url 'templapp:relative' %}">Go to /templapp/relative</a></p>
+<p><a href="{% url 'templapp:base' %}">Go to /templapp/base</a> to view the base template from which other templates inherit from</p>
+{% endblock %}
