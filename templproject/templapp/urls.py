@@ -7,10 +7,6 @@ from templapp import views
 app_name = "templapp"
 
 urlpatterns = [
-    path("other", views.other, name="other"),
-    path("relative", views.relative, name="relative"),
-    path("base", views.base, name="base"),
-    path("inheriting",views.inheriting, name="inheriting"),
-    path("index_inheriting",views.index_inheriting, name="index_inheriting"),
-    path("index_filter",views.index_filter, name="index_filter"),
+    path("", views.index, name="index"),
+    path("filter", views.filter_example, name="filter_example"),
 ]
